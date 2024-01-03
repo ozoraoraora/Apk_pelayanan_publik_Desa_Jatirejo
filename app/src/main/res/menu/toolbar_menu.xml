@@ -17,17 +17,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/user"
-                android:title="Akun" />
+                android:title="Login" />
+            <item
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="Logout"
+                android:icon="@drawable/logout"/>
             <item
                 android:id="@+id/action_bantuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:title="bantuan" />
-<!--            <item-->
-<!--                android:id="@+id/action_profil_desa"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:title="Profil Desa" />-->
+
 
 <!--            <item-->
 <!--                android:id="@+id/action_tender"-->

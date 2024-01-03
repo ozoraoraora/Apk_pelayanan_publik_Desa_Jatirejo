@@ -8,7 +8,6 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.snackbar.Snackbar
 
 class tender_1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,13 +56,15 @@ class tender_1 : AppCompatActivity() {
         var itemClicked: String = ""
 
         when (item.itemId) {
-            R.id.menu_more -> {
-                itemClicked = "more menu Clicked"
-            }
             R.id.action_akun -> {
                 itemClicked = "akun Clicked"
-            }
 
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.logout -> {
+
+            }
             R.id.action_bantuan -> {
                 itemClicked = "bantuan cliked"
             }
@@ -90,8 +91,8 @@ class tender_1 : AppCompatActivity() {
 
         val homeDashboardLayout = findViewById<ConstraintLayout>(R.id.vote_aju_tender)
 
-        Snackbar.make(homeDashboardLayout, itemClicked, Snackbar.LENGTH_LONG)//.setTextColor(Color.parseColor("#f78f23"))
-            .setAction("Action", null).show()
+//        Snackbar.make(homeDashboardLayout, itemClicked, Snackbar.LENGTH_LONG)//.setTextColor(Color.parseColor("#f78f23"))
+//            .setAction("Action", null).show()
 
         return super.onOptionsItemSelected(item)
     }

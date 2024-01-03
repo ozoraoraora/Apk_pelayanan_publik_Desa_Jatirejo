@@ -1,5 +1,6 @@
 package com.example.apk_pelayanan_publik_desa_jatirejo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apk_pelayanan_publik_desa_jatirejo.adapter.vootingAdapter
 import com.example.apk_pelayanan_publik_desa_jatirejo.model.vooting
-import com.google.android.material.snackbar.Snackbar
 
 class vooting_tender : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,13 +85,15 @@ class vooting_tender : AppCompatActivity() {
         var itemClicked: String = ""
 
         when (item.itemId) {
-            R.id.menu_more -> {
-                itemClicked = "more menu Clicked"
-            }
             R.id.action_akun -> {
                 itemClicked = "akun Clicked"
-            }
 
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.logout -> {
+
+            }
             R.id.action_bantuan -> {
                 itemClicked = "bantuan cliked"
             }
@@ -118,8 +120,8 @@ class vooting_tender : AppCompatActivity() {
 
         val homeDashboardLayout = findViewById<ConstraintLayout>(R.id.voteTender)
 
-        Snackbar.make(homeDashboardLayout, itemClicked, Snackbar.LENGTH_LONG)//.setTextColor(Color.parseColor("#f78f23"))
-            .setAction("Action", null).show()
+//        Snackbar.make(homeDashboardLayout, itemClicked, Snackbar.LENGTH_LONG)//.setTextColor(Color.parseColor("#f78f23"))
+//            .setAction("Action", null).show()
 
         return super.onOptionsItemSelected(item)
     }

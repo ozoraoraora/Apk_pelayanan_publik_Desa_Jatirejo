@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.snackbar.Snackbar
 
 
 
@@ -110,20 +109,21 @@ class home_dashboard : AppCompatActivity() {
         var itemClicked: String = ""
 
         when (item.itemId) {
-            R.id.menu_more -> {
-                itemClicked = "more menu Clicked"
-            }
+
             R.id.action_akun -> {
                 itemClicked = "akun Clicked"
-            }
 
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.logout -> {
+
+            }
             R.id.action_bantuan -> {
                 itemClicked = "bantuan cliked"
             }
 
-//            R.id.action_profil_desa -> {
-//                itemClicked = "profil desa Clicked"
-//            }
+
 //
 //            R.id.action_tender -> {
 //                itemClicked = "tender Clicked"
@@ -143,8 +143,8 @@ class home_dashboard : AppCompatActivity() {
 
         val homeDashboardLayout = findViewById<ConstraintLayout>(R.id.dash_home)
 
-        Snackbar.make(homeDashboardLayout, itemClicked, Snackbar.LENGTH_LONG)//.setTextColor(Color.parseColor("#f78f23"))
-            .setAction("Action", null).show()
+//        Snackbar.make(homeDashboardLayout, itemClicked, Snackbar.LENGTH_LONG)//.setTextColor(Color.parseColor("#f78f23"))
+//            .setAction("Action", null).show()
 
         return super.onOptionsItemSelected(item)
     }
