@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profilDEsa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".profil_desa">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@color/black"
+            app:titleTextColor="@color/black"
+            app:menu="@menu/toolbar_menu"/>
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="54dp"
+            android:autoStart="true"
+            android:flipInterval="2000"
+            android:inAnimation="@anim/slide_in_left"
+            android:outAnimation="@anim/slide_out_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.007">
+
+            <ImageView
+                android:id="@+id/img_slide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.007"
+                app:srcCompat="@drawable/kantor_desa" />
+
+            <ImageView
+                android:id="@+id/img_slide_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.007"
+                app:srcCompat="@drawable/mesjid_al_ikhlas" />
+
+            <ImageView
+                android:id="@+id/img_slide_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.007"
+                app:srcCompat="@drawable/sd" />
+
+            <ImageView
+                android:id="@+id/img_slide_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.007"
+                app:srcCompat="@drawable/tk" />
+
+            <ImageView
+                android:id="@+id/img_slide_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.007"
+                app:srcCompat="@drawable/tpa" />
+
+        </ViewFlipper>
+
+<!--        cardview jumlah penduduk-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_jlh_pddk"
+            android:layout_width="173dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="36dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/cw_jlh_kk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="173dp"
+                android:layout_height="185dp">
+
+                <ImageView
+                    android:id="@+id/img_jlh_pddk"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jumlah_pddk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_jlh_pddk"
+                    android:layout_width="161dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Jumlah penduduk"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_jlh_pddk"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_penduduk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="1023"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_jlh_pddk"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_penduduk_jiwa"
+                    android:layout_width="64dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="jiwa"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_penduduk"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+<!--        end cardview jumlah penduduk-->
+
+<!--        cardview jumlah kk-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_jlh_kk"
+            android:layout_width="173dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="36dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cw_jlh_pddk"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlipper">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="173dp"
+                android:layout_height="185dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_jlh_kk"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/kk"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.478"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_jlh_kk"
+                    android:layout_width="162dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:scaleType="centerCrop"
+                    android:text="Jumlah KK"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_jlh_kk"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_kk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="321"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_jlh_kk"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_kartuKK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Kartu Keluarga"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_kk"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+<!--        end cardview jumlah kk-->
+
+<!--        cardview jumlah laki-laki-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_jlh_lk"
+            android:layout_width="173dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_visi"
+            app:layout_constraintEnd_toStartOf="@+id/cw_jlh_pr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_jlh_pddk">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="173dp"
+                android:layout_height="185dp">
+
+                <ImageView
+                    android:id="@+id/img_jlh_lk"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/man"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_jlh_lk"
+                    android:layout_width="161dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Jumlah Laki-laki"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_jlh_lk"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_lk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="490"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_jlh_lk"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_penduduk_jiwa_lk"
+                    android:layout_width="64dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="jiwa"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_lk"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+<!--        end cardview jumlah laki-laki-->
+
+<!--        cardview jumlah perempuan-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_jlh_pr"
+            android:layout_width="173dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_visi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cw_jlh_lk"
+            app:layout_constraintTop_toBottomOf="@+id/cw_jlh_kk">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="173dp"
+                android:layout_height="185dp">
+
+                <ImageView
+                    android:id="@+id/img_jlh_pr"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/women"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.478"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_jlh_pr"
+                    android:layout_width="162dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:scaleType="centerCrop"
+                    android:text="Jumlah Perempuan"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_jlh_pr"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_pr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="533"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_jlh_pr"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_penduduk_jiwa_pr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="jiwa"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_pr"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+<!--        end cardview jumlah perempuan-->
+
+        <TextView
+            android:id="@+id/text_visi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Visi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_jlh_lk"
+            />
+
+
+<!--        cardview visi 1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_visi_1"
+            android:layout_width="363dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_visi">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="363dp"
+                android:layout_height="175dp"
+                android:background="@drawable/rounded_btn_login">
+
+
+                <TextView
+                    android:id="@+id/txt_visi_1_title"
+                    android:layout_width="360dp"
+                    android:layout_height="47dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:text="Kesejahteraan Bersama"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_visi_1_isi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_visi_1_isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="10dp"
+                    android:text="Menjadi desa dimana kesejahteraan bersama menjadi kenyataan, dengan setiap warga menikmati tingkat hidup yang lebih baik."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_visi_1_title"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+<!--        end cardview visi 1-->
+
+<!--        card view visi 2-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_visi_2"
+            android:layout_width="363dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_visi_1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="363dp"
+                android:layout_height="175dp"
+                android:background="@drawable/rounded_btn_login">
+
+
+                <TextView
+                    android:id="@+id/txt_visi_2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:text="Keberlangsungan Lingkungan"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_visi_2_isi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_visi_2_isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="10dp"
+                    android:text="Mengembangkan desa yang berkelanjutan,menjaga keindahan alam, dan meminimalkan dampak negatif terhadap lingkungan."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_visi_2_title"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+<!--        end cardview2 visi 2-->
+
+<!--        cardview visi 3-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_visi_3"
+            android:layout_width="363dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_visi_2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="363dp"
+                android:layout_height="175dp"
+                android:background="@drawable/rounded_btn_login">
+
+
+                <TextView
+                    android:id="@+id/txt_visi_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:text="Keterlibatan Warga"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_visi_3_isi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_visi_3_isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="10dp"
+                    android:text="Mencipatajan desa inklusif dengan melibatkan aktif seluruh warga dalam proses pengambilan keputusandan pembangunan."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_visi_3_title"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!--        end cardview3 visi 3-->
+
+        <TextView
+            android:id="@+id/text_misi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Misi"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_visi_3" />
+
+        <!--        cardview misi 1-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_misi_1"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_misi">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_btn_login">
+
+
+                <TextView
+                    android:id="@+id/txt_misi_1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:text="Pembangunan Infrastruktur Yang Berkesinambungan"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_misi_1_isi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_misi_1_isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="10dp"
+                    android:text="Merencanakan dan melaksanakan pembangunan infrastruktur yang berkelanjutan, termasuk jaringan jalan, air bersih, sanitasi, dan listrik, untuk meningkatkan kualitas hidup warga desa."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_misi_1_title"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!--        end cardview misi 1-->
+
+        <!--        card view misi 2-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_misi_2"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_misi_1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_btn_login">
+
+
+                <TextView
+                    android:id="@+id/txt_misi_2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:text="Pemberdayaan Ekonomi Lokal"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_misi_2_isi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_misi_2_isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="10dp"
+                    android:text="Menggalakkan pertumbuhan ekonomi dengan mendukung usaha mikro dan kecil, menciptakan lapangan kerja lokal, dan mendorong inovasi ekonomi untuk meningkatkan taraf hidup warga desa."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_misi_2_title"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!--        end cardview2 misi 2-->
+
+        <!--        cardview visi 3-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cw_misi_3"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_misi_2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_btn_login">
+
+
+                <TextView
+                    android:id="@+id/txt_misi_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10dp"
+                    android:text="Konservasi Lingkungan dan Warisan Budaya"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_misi_3_isi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.052"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_marginBaseline="5dp" />
+
+                <TextView
+                    android:id="@+id/txt_misi_3_isi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="10dp"
+                    android:text="Melindungi dan mempertahankan keanekaragaman alam serta warisan budaya desa, sambil mempromosikan praktik berkelanjutan dan kesadaran lingkungan dikalangan warga."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_misi_3_title"
+                    app:layout_marginBaseline="5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!--        end cardview3 misi 3-->
+
+<!--        aparatur desa-->
+
+        <TextView
+            android:id="@+id/text_aparatur_desa"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Aparatur Desa"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cw_misi_3" />
+
+<!--        ubah rc aparatur desa-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_aparatur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/rv_aparatur"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_aparatur_desa" />
+
+
+        <!--        end-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

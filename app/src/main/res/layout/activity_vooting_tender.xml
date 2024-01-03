@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vooting_tender"
+
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/voteTender">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@color/black"
+            app:titleTextColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_vote_tender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Voting"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/txt_pilih_pengaju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Silahkan pilh salah satu peserta"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_vote_tender" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_voting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_margin="10dp"
+            tools:listitem="@layout/rv_vooting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_pilih_pengaju" />
+
+
+<!--        &lt;!&ndash;        cardview main peserta pengaju 1&ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardView_main"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:cardElevation="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txt_pilih_pengaju">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10dp"-->
+<!--                android:background="@color/background">-->
+
+<!--&lt;!&ndash;                cardview img pengaju&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_img_pengaju"-->
+<!--                    android:layout_width="230dp"-->
+<!--                    android:layout_height="230dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="230dp"-->
+<!--                        android:layout_height="230dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/img_pengajuTender"-->
+<!--                            android:layout_width="230dp"-->
+<!--                            android:layout_height="230dp"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:scrollbarAlwaysDrawHorizontalTrack="false"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            app:srcCompat="@drawable/asal"-->
+<!--                            tools:src="@tools:sample/avatars" />-->
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--&lt;!&ndash;                end cardview img pengaju&ndash;&gt;-->
+
+<!--                &lt;!&ndash;            card sekilas pengaju&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_sekilas_pengaju"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/cardview_img_pengaju">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_pengaju"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Nama :"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_pengajuTender"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="3dp"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Ari Kusworo oauauoaoaoao"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/txt_nama_pengaju"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jlh_anggaran"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:text="Jumlah anggaran :"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_pengaju" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jlh_anggaranTender"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="3dp"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:text="800 juta"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/txt_jlh_anggaran"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_pengaju" />-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_detail_pengaju_1"-->
+<!--                            android:layout_width="134dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:background="@drawable/rounded_btn_login"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:text="Detail pengaju"-->
+<!--                            android:textAlignment="textStart"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_jlh_anggaran" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;            end card sekilas pengaju&ndash;&gt;-->
+
+<!--                &lt;!&ndash;            cardview radio button&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_radiobtn_peserta_1"-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/cardview_sekilas_pengaju"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/cardview_img_pengaju">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/radioBtn_1"-->
+<!--                            android:layout_width="32dp"-->
+<!--                            android:layout_height="36dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:padding="0dp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--&lt;!&ndash;                end cardview radio button&ndash;&gt;-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+<!--&lt;!&ndash;         end cardview main peserta pengaju 1&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;        cardview main peserta pengaju 2&ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardView_main_2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cardView_main">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/background"-->
+<!--                android:padding="10dp">-->
+
+<!--                &lt;!&ndash;                cardview img pengaju 2&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_img_pengaju_2"-->
+<!--                    android:layout_width="230dp"-->
+<!--                    android:layout_height="230dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="230dp"-->
+<!--                        android:layout_height="230dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/img_pengajuTender_2"-->
+<!--                            android:layout_width="230dp"-->
+<!--                            android:layout_height="230dp"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:scrollbarAlwaysDrawHorizontalTrack="false"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            app:srcCompat="@drawable/asal"-->
+<!--                            tools:src="@tools:sample/avatars" />-->
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;                end cardview img pengaju 2&ndash;&gt;-->
+
+<!--                &lt;!&ndash;            card sekilas pengaju 2&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_sekilas_pengaju_2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/cardview_img_pengaju_2">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_pengaju_2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Nama :"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_pengajuTender_2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="3dp"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Ari Kusworo oauauoaoaoao"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/txt_nama_pengaju_2"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jlh_anggaran_2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:text="Jumlah anggaran :"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_pengaju_2" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jlh_anggaranTender_2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="3dp"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:text="800 juta"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/txt_jlh_anggaran_2"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_pengaju_2" />-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_detail_pengaju_2"-->
+<!--                            android:layout_width="134dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:background="@drawable/rounded_btn_login"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:text="Detail pengaju"-->
+<!--                            android:textAlignment="textStart"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_jlh_anggaran_2" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;            end card sekilas pengaju 2&ndash;&gt;-->
+
+<!--                &lt;!&ndash;            cardview radio button 2&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_radiobtn_peserta_2"-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/cardview_sekilas_pengaju_2"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/cardview_img_pengaju_2">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/radioBtn_2"-->
+<!--                            android:layout_width="32dp"-->
+<!--                            android:layout_height="36dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:padding="0dp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;                end cardview radio button 2&ndash;&gt;-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+<!--        &lt;!&ndash;         end cardview main peserta pengaju 2&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        cardview main peserta pengaju 3&ndash;&gt;-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardView_main_3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            app:cardElevation="8dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cardView_main_2">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/background"-->
+<!--                android:padding="10dp">-->
+
+<!--                &lt;!&ndash;                cardview img pengaju 3&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_img_pengaju_3"-->
+<!--                    android:layout_width="230dp"-->
+<!--                    android:layout_height="230dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="230dp"-->
+<!--                        android:layout_height="230dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/img_pengajuTender_3"-->
+<!--                            android:layout_width="230dp"-->
+<!--                            android:layout_height="230dp"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:scrollbarAlwaysDrawHorizontalTrack="false"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            app:srcCompat="@drawable/asal"-->
+<!--                            tools:src="@tools:sample/avatars" />-->
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;                end cardview img pengaju 2&ndash;&gt;-->
+
+<!--                &lt;!&ndash;            card sekilas pengaju 2&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_sekilas_pengaju_3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/cardview_img_pengaju_3">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="10dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_pengaju_3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Nama :"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_pengajuTender_3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="3dp"-->
+<!--                            android:fontFamily="@font/poppins_semibold"-->
+<!--                            android:text="Ari Kusworo oauauoaoaoao"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/txt_nama_pengaju_3"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jlh_anggaran_3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:text="Jumlah anggaran :"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_pengaju_3" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jlh_anggaranTender_3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="3dp"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:text="800 juta"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/txt_jlh_anggaran_3"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_nama_pengaju_3" />-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_detail_pengaju_3"-->
+<!--                            android:layout_width="134dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:background="@drawable/rounded_btn_login"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:text="Detail pengaju"-->
+<!--                            android:textAlignment="textStart"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="14sp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/txt_jlh_anggaran_3" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;            end card sekilas pengaju 3&ndash;&gt;-->
+
+<!--                &lt;!&ndash;            cardview radio button 3&ndash;&gt;-->
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardview_radiobtn_peserta_3"-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="120dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="8dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/cardview_sekilas_pengaju_3"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/cardview_img_pengaju_3">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/radioBtn_3"-->
+<!--                            android:layout_width="32dp"-->
+<!--                            android:layout_height="36dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:padding="0dp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+<!--                &lt;!&ndash;                end cardview radio button 3&ndash;&gt;-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+<!--        &lt;!&ndash;         end cardview main peserta pengaju 3&ndash;&gt;-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

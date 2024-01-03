@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Apk_pelayanan_publik_Desa_Jatirejo</string>
+    <string name="item_label">Nama</string>
+    <string name="item_label_jk">Jenis Kelamnin</string>
+    <string name="auto_complete_tv_description">Pilih opsi dari daftar yang muncul.</string>
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <item
+        android:id="@+id/menu_more"
+        android:title="menu"
+        android:icon="@drawable/more_menu"
+        app:showAsAction="always"
+        >
+
+        <menu>
+            <item
+                android:id="@+id/action_akun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/user"
+                android:title="Akun" />
+            <item
+                android:id="@+id/action_bantuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="bantuan" />
+<!--            <item-->
+<!--                android:id="@+id/action_profil_desa"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:title="Profil Desa" />-->
+
+<!--            <item-->
+<!--                android:id="@+id/action_tender"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:title="Tender"-->
+<!--                app:showAsAction="always">-->
+
+<!--                <menu>-->
+<!--                    <item-->
+<!--                        android:id="@+id/pengajuan_tender"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Pengajuan Tender"/>-->
+
+<!--                    <item-->
+<!--                        android:id="@+id/voting_tender"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Voting Tender"/>-->
+
+<!--                </menu>-->
+
+<!--            </item>-->
+<!--            <item-->
+<!--                android:id="@+id/action_pengurusan_surat"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:title="Pengurusan Surat">-->
+
+<!--                <menu>-->
+<!--                    <item-->
+<!--                        android:id="@+id/pengurusan_surat_ket_tidak_mampu"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Surat keterangan tidak mampu" />-->
+
+<!--                    <item-->
+<!--                        android:id="@+id/pengurusan_surat_ket_meninggal_dunia"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Surat keterangan meninggal dunia" />-->
+
+<!--                    <item-->
+<!--                        android:id="@+id/pengurusan_surat_ket_domisili"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Surat keterangan domisii" />-->
+
+<!--                    <item-->
+<!--                        android:id="@+id/pengurusan_surat_ket_blm_sdh_menikah"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Surat keterangan belum/sudah menikah" />-->
+<!--                </menu>-->
+<!--            </item>-->
+
+<!--            <item-->
+<!--                android:id="@+id/action_keuangan_desa"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:title="Keuangan Desa" >-->
+
+<!--                <menu>-->
+<!--                    <item-->
+<!--                        android:id="@+id/action_rencana_anggaran"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Rencana anggaran"/>-->
+
+<!--                    <item-->
+<!--                        android:id="@+id/action_laporan_keuangan"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:title="Laporan keuangan"/>-->
+<!--                </menu>-->
+
+<!--            </item>-->
+<!--            <item-->
+<!--                android:id="@+id/action_saran_dan_masukan"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:title="Saran dan Masukan" />-->
+        </menu>
+    </item>
+</menu>

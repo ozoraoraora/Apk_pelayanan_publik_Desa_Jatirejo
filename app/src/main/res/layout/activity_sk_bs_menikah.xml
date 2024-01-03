@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sk_bs_menikah">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_sk_bs_menikah"
+            android:layout_width="404dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Surat keterangan belum/sudah menikah"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/edittext_nama"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Nama"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_sk_bs_menikah"/>
+
+
+        <EditText
+            android:id="@+id/edittext_tempat_lahir"
+            android:layout_width="235dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Tempat lahir"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/edittext_tgl_lahir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_nama" />
+
+        <EditText
+            android:id="@+id/edittext_tgl_lahir"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_input"
+            android:focusable="false"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Tanggal lahir"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:onClick="showDatePickerDialog"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edittext_tempat_lahir"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_nama"/>
+
+        <EditText
+            android:id="@+id/edittext_nik"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="NIK"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_tempat_lahir" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_tv_jk"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:focusable="false"
+            android:hint="Jenis Kelamin"
+            android:inputType="none"
+            android:drawableRight="@drawable/panah_bawah"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_nik" />
+
+
+        <EditText
+            android:id="@+id/edittext_agama"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Agama"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/auto_complete_tv_jk" />
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_tv_status_perkawinan"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:hint="Status Perkawinan"
+            android:focusable="false"
+            android:inputType="none"
+            android:drawableRight="@drawable/panah_bawah"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_agama" />
+
+        <EditText
+            android:id="@+id/edittext_pekerjaan"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Pekerjaan"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/auto_complete_tv_status_perkawinan" />
+
+        <EditText
+            android:id="@+id/edittext_alamat"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_pekerjaan" />
+
+        <EditText
+            android:id="@+id/edittext_wa"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Masukan no WA"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_alamat" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_upload_ktp"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_wa">
+
+            <RelativeLayout
+                android:layout_width="360dp"
+                android:layout_height="55dp"
+                android:background="@color/light_green"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txt_upload_ktp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="22dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="+Upload Fotao KTP"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <ImageView
+                    android:id="@+id/img_view_uplod_ktp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignTop="@+id/txt_upload_ktp"
+                    android:layout_alignBottom="@+id/txt_upload_ktp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="0dp"
+                    app:srcCompat="@drawable/icons_import_pdf"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_upload_kk"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_upload_ktp">
+
+            <RelativeLayout
+                android:layout_width="360dp"
+                android:layout_height="55dp"
+                android:background="@color/light_green"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txt_upload_kk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="22dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="+Upload Fotao KK"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <ImageView
+                    android:id="@+id/img_view_uplod_kk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignTop="@+id/txt_upload_kk"
+                    android:layout_alignBottom="@+id/txt_upload_kk"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="0dp"
+                    app:srcCompat="@drawable/icons_import_pdf"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_ajukan_sk_bs_menikah"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_rounded_p_surat"
+            android:drawableRight="@drawable/ic_panah"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="10dp"
+            android:text="AJUKAN"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_upload_kk" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
