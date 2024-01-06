@@ -124,19 +124,7 @@ class home_dashboard : AppCompatActivity() {
             }
 
 
-//
-//            R.id.action_tender -> {
-//                itemClicked = "tender Clicked"
-//            }
-//            R.id.action_pengurusan_surat -> {
-//                itemClicked = "pengurusan surat Clicked"
-//            }
-//            R.id.action_keuangan_desa -> {
-//                itemClicked = "keuangan desa Clicked"
-//            }
-//            R.id.action_saran_dan_masukan -> {
-//                itemClicked = "saran dan masukan Clicked"
-//            }
+
         }
 
         //Buat Snackbar sebagai aksi
